@@ -14,6 +14,10 @@ public class Hitter {
 	}
 
 	private void addPitching(int rdNumb) {
+        if (rdNumb > 8) {
+            return;
+        }
+
 		String target = STRIKE_ZONE[rdNumb];
 		if (pitchPrediction.indexOf(target) == -1) {
 			pitchPrediction.append(target);
